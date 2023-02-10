@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
 
-class ListViewAdapter(val List: MutableList<String>) : BaseAdapter() {
+class ListViewAdapter(val List: MutableList<ListViewModel>) : BaseAdapter() {
     override fun getCount(): Int {
 
         return List.size
@@ -30,7 +30,7 @@ return p0.toLong()
         }
 
         val title = convertView!!.findViewById<TextView>(R.id.listviewItemText)
-        title.text = List[p0]
+        title.text = List[p0].text1
 
 
         return convertView!!
